@@ -40,7 +40,7 @@ class QuoteGenerator:
                         {"role": "user", "content": prompt}
                     ],
                     max_tokens=50,
-                    temperature=0.7
+                    temperature=1.7
                 )
                 yield response.choices[0].message.content.strip()
             except Exception as e:
@@ -51,7 +51,7 @@ class QuoteGenerator:
 if __name__ == "__main__":
     quote_generator = QuoteGenerator()
     category = "Fitness"
-    number = 5
+    number = 20
 
     for quote in quote_generator.generate_quote(category, number):
         print(quote)
