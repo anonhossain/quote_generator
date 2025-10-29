@@ -44,6 +44,7 @@ class QuoteGenerator:
                 Example output:
                 {{
                     "{category}": "quote"
+                    "author": "ai-generated"
                 }}
 
                 Now, provide one valid quote for the {category} category:
@@ -58,6 +59,7 @@ class QuoteGenerator:
                     ],
                     max_tokens=50,
                     temperature=1.0
+                    
                 )
                 yield response.choices[0].message.content.strip()
             except Exception as e:
