@@ -323,7 +323,7 @@ class QuoteGenerator:
 if __name__ == "__main__":
     quote_generator = QuoteGenerator()
     category = "career"
-    number = 20
+    number = 200
 
     for quote in quote_generator.generate_quote(category, number):
         print(quote)
